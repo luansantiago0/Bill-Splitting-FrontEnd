@@ -18,8 +18,6 @@ const App: React.FC = () => {
     <div className="App bg-[#FFFFFF]">
       <Header />
       <Home />
-      {/* <Modal onLogin={handleLogin} />
-      {isLoggedIn && <Apps />} */}
       <Apps />
     </div>
   );

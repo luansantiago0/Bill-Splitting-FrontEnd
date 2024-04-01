@@ -28,6 +28,12 @@ const Apps: React.FC = () => {
     setOrders(updatedOrders);
   };
 
+  const handleRemoveFriend = (orderIndex: number, friendIndex: number) => {
+    const updatedOrders = [...orders];
+    updatedOrders[orderIndex].friends.splice(friendIndex, 1);
+    setOrders(updatedOrders);
+  };
+
   return (
     <div className="container">
       <h1>Bill Splitting Application</h1>
@@ -43,9 +49,9 @@ const Apps: React.FC = () => {
               order={order.name}
               price={order.price}
               friends={order.friends}
-              // // onRemoveFriend={(friendIndex) =>
-              // //   handleRemoveFriend(orderIndex, friendIndex)
-              // }
+              onRemoveFriend={(friendIndex: number) =>
+                handleRemoveFriend(index, friendIndex)
+              }
             />
           )}
         </div>

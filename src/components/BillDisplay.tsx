@@ -35,7 +35,7 @@ const BillDisplay: React.FC<BillDisplayProps> = ({
               <li key={index} className="text-gray-700 flex items-center">
                 <span>{friend}</span>
                 <button
-                  onClick={() => handleRemoveFriend(index)}
+                  onClick={() => handleRemoveFriend(index)} // Chama handleRemoveFriend com o índice do amigo
                   className="ml-2 text-red-500"
                 >
                   Remove
