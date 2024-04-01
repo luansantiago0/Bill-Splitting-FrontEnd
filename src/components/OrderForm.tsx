@@ -1,32 +1,40 @@
+"use client";
 import React, { useState } from "react";
 
 interface OrderFormProps {
-  onCreateOrder: (orderName: string) => void;
+  onCreateOrder: (orderName: string, price: string) => void;
 }
 
 const OrderForm: React.FC<OrderFormProps> = ({ onCreateOrder }) => {
   const [orderName, setOrderName] = useState("");
+  const [price, setPrice] = useState("");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setOrderName(event.target.value);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (orderName.trim() !== "") {
-      onCreateOrder(orderName.trim());
-      setOrderName("");
-    }
+  const handleCreateOrder = () => {
+    onCreateOrder(orderName, price);
+    setOrderName("");
+    setPrice("");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Order Name:
-        <input type="text" value={orderName} onChange={handleChange} required />
-      </label>
-      <button type="submit">Create Order</button>
-    </form>
+    <div className="input-container">
+      <input
+        type="text"
+        placeholder="Order Name"
+        value={orderName}
+        onChange={(e) => setOrderName(e.target.value)}
+        className="friend-input"
+      />
+      <input
+        type="number"
+        placeholder="Price"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+        className="ml-4 friend-input"
+      />
+      <button onClick={handleCreateOrder} className="friend-button ml-4">
+        Create Order
+      </button>
+    </div>
   );
 };
 

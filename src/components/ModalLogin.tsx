@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({
             name="email"
             className="border border-black rounded-md p-2"
           />
-          <label htmlFor="senha">Senha</label>
+          <label htmlFor="senha">Password</label>
           <input
             type="password"
             id="senha"
@@ -37,11 +37,11 @@ const Modal: React.FC<ModalProps> = ({
             className="border border-black rounded-md p-2"
           />
           <button
-            className="block bg-[#8DB986] border-none rounded-md py-2 px-8 text-white font-mono mt-4 font-semibold"
+            className="block bg-[#EAE137] border-none rounded-md py-2 px-8 text-white font-mono mt-4 font-semibold"
             type="submit"
             onClick={abrirModal}
           >
-            Entrar
+            Log In
           </button>
         </form>
       </div>
