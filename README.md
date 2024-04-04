@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Front-end Project Documentation for BillSplitting
 
-## Getting Started
+---
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The following documentation describes the front-end project of BillSplitting, a web application developed to facilitate bill splitting among friends. This documentation aims to provide an overview of the project, its structure, technologies used, and instructions for execution and development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+BillSplitting is a web application that allows users to efficiently split bills among friends. The application offers functionalities to create orders, add friends to orders, and view the final bill division.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **React.js**: JavaScript framework for building the user interface.
+- **Next.js**: React framework for server-side rendering and routing.
+- **Tailwind CSS**: CSS framework for quick and responsive styling.
+- **TypeScript**: Programming language for typed development.
+- **React Router**: Library for managing routes in the application.
 
-To learn more about Next.js, take a look at the following resources:
+  
+## Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Runtime Dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **axios**: ^1.6.8
+- **next**: ^14.1.4
+- **react**: ^18.2.0
+- **react-dom**: ^18.2.0
+- **react-icons**: ^5.0.1
+- **react-modal**: ^3.16.1
+- **react-router-dom**: ^6.22.3
+- **zustand**: ^4.5.2
 
-## Deploy on Vercel
+### Development Dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **@types/node**: ^20
+- **@types/react**: ^18
+- **@types/react-dom**: ^18
+- **@types/react-modal**: ^3.16.3
+- **autoprefixer**: ^10.0.1
+- **eslint**: ^8
+- **eslint-config-next**: 14.1.4
+- **postcss**: ^8
+- **tailwindcss**: ^3.3.0
+- **typescript**: ^5
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Running the Project
+
+To run the project locally, follow these steps:
+
+1. Make sure you have Node.js installed on your machine.
+2. Clone the BillSplitting project repository.
+3. In the project root directory, run the command `npm install` to install dependencies.
+4. After installation, run the command `npm run dev` to start the development server.
+5. Access the application in your browser using the address `http://localhost:3000`.
+
+## Development
+
+To contribute to the development of the project, follow these guidelines:
+
+- Create a separate branch for each new feature or bug fix.
+- Keep the code clean and well-documented.
+- Follow the project's naming and styling conventions.
+- Once a change is complete, create a pull request to the main branch and request a review.
+
+
+
+## Running the Project
+
+To run the project locally, follow these steps:
+
+1. Make sure you have Node.js installed on your machine.
+2. Clone the BillSplitting project repository.
+3. In the project root directory, run the command `npm install` to install dependencies.
+4. After installation, run the command `npm run dev` to start the development server.
+5. Access the application in your browser using the address `http://localhost:3000`.
+
+## Development
+
+To contribute to the development of the project, follow these guidelines:
+
+- Create a separate branch for each new feature or bug fix.
+- Keep the code clean and well-documented.
+- Follow the project's naming and styling conventions.
+- Once a change is complete, create a pull request to the main branch and request a review.
+
+
+
+
