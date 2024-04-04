@@ -7,12 +7,14 @@ interface ModalProps {
   cliqueForaModal?: () => void;
   abrirModal?: () => void;
   fecharModal?: () => void;
+  handleLogin?: () => void; // Adicione a propriedade handleLogin ao ModalProps
 }
 
 const ModalLogin: React.FC<ModalProps> = ({
   cliqueForaModal,
   abrirModal,
   fecharModal,
+  handleLogin, // Receba a propriedade handleLogin
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,17 +23,23 @@ const ModalLogin: React.FC<ModalProps> = ({
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
       const response = await axios.post("http://localhost:8000/login", {
         email,
         password,
       });
+      console.log(response.data);
       const token = response.data.access_token;
       setToken(token);
       if (fecharModal) {
         fecharModal();
       }
-    } catch (error) {
+      if (handleLogin) {
+        // Chame a função handleLogin se ela existir
+        handleLogin();
+      }
+    } catch (error: any) {
       setError("Failed to login. Please try again.");
       console.error("Error logging in:", error);
     }
@@ -60,7 +68,7 @@ const ModalLogin: React.FC<ModalProps> = ({
           <label htmlFor="senha">Password</label>
           <input
             type="password"
-            id="senha"
+            id="password"
             name="senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

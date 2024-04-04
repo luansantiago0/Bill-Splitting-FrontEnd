@@ -1,24 +1,25 @@
 "use client";
 import React, { useState } from "react";
 import Header from "@/components/Header";
-import Home from "./(home)";
-import Modal from "../components/ModalLogin";
-import Apps from "./app";
+import Home from "../components/Home";
+import Apps from "./aplication/page";
+import { useRouter } from "next/navigation";
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
 
-  // Função para simular o login do usuário
   const handleLogin = () => {
-    // Lógica para verificar o login do usuário
+    // Lógica de autenticação...
+    // Se a autenticação for bem-sucedida, defina isLoggedIn como true
     setIsLoggedIn(true);
+    router.push("/aplication");
   };
 
   return (
     <div className="App bg-[#FFFFFF]">
-      <Header />
+      <Header setIsLoggedIn={setIsLoggedIn} handleLogin={handleLogin} />
       <Home />
-      <Apps />
     </div>
   );
 };

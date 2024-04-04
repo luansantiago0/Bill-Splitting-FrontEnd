@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import OrderForm from "../components/OrderForm";
-import FriendForm from "../components/FriendForm";
-import BillDisplay from "../components/BillDisplay";
+import OrderForm from "../../components/OrderForm";
+import FriendForm from "../../components/FriendForm";
+import BillDisplay from "../../components/BillDisplay";
 
 interface Order {
   name: string;
