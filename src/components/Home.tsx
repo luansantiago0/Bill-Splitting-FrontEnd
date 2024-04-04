@@ -24,7 +24,7 @@ function Home() {
         <p className="text-black font-light mb-8">
           With our app you can easily organize your expenses shared with friends
           and family. Whether for group meals, leisure activities or any other
-          situation in which you need split the costs, we're here to help.
+          situation in which you need split the costs, we re here to help.
         </p>
 
         <button className="w-40 h-9 bg-[#EAE137] hover:bg-yellow-500 text-black font-medium rounded-tr-lg shadow-md">
@@ -90,7 +90,7 @@ function Home() {
             <p className="font-sans leading-relaxed mb-4">
               In this feature, users can add friends who participated in the
               activity or shared the expense to each created order. To add a
-              friend, simply type the friend's name into the participant list of
+              friend, simply type the friend s name into the participant list of
               the order.
             </p>
             <p className="font-sans leading-relaxed mb-4">
