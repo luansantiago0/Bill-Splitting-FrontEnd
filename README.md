@@ -64,6 +64,10 @@ To contribute to the development of the project, follow these guidelines:
 - Follow the project's naming and styling conventions.
 - Once a change is complete, create a pull request to the main branch and request a review.
 
+## Known Issues
+
+- **Rendering Issue After Login**: There is currently an issue where the application does not render the application page immediately after the user logs in. However, users can manually navigate to the application page by entering `/aplication` in the URL bar.
+
 
 
 ## Running the Project
